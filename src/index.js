@@ -24,7 +24,9 @@ class App extends React.Component {
  render() {
   return (
     <div className="App">
+
      <div className="navbar-wrapper">
+
         <div className="logo">desc. logo</div>
         <div className="btn">
           <button>newbutton</button>
@@ -32,6 +34,7 @@ class App extends React.Component {
           <button>newbutton</button>
           <button>newbutton</button>
         </div>
+
       </div> 
       <div className="user-wrapper"> 
       {this.renderUsers()}
@@ -39,6 +42,7 @@ class App extends React.Component {
     </div> 
     )
 }
+
 
 }
 
