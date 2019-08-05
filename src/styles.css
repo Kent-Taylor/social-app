@@ -1,4 +1,51 @@
-.App {
+.user-wrapper {
   font-family: sans-serif;
-  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 275px);
+  justify-content: center;
+}
+.navbar-wrapper {
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+  margin: 0px;
+  background-color: #9cd4ed;
+
+}
+.logo {
+  display: flex;
+  color: red;
+  align-items: center;
+  margin: 15px;
+}
+
+.btn {
+  display: flex;
+  align-self: flex-end;
+  justify-content: space-around;
+  margin-left: 20%;
+}
+
+.user-profile {
+  margin: 5px;
+  width: 250px;
+  height: 300px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background-color: #999; /*box-shadow: 5px 5px 5px #999; */
+}
+
+.user-bio {
+  width: 230px;
+  border: 1px solid #666; /*we can ommit this border*/
+}
+
+img {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
 }
