@@ -23,8 +23,8 @@ class User(db.Model):
     image = db.Column(db.String(500))
     short_bio = db.Column(db.String(500))
 
-    def __init__(self, name, image):
-        self.name = text
+    def __init__(self, name, image, short_bio):
+        self.name = name
         self.image = image
         self.short_bio = short_bio
 
