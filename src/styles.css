@@ -2,3 +2,29 @@
   font-family: sans-serif;
   text-align: center;
 }
+
+.navbar-wrapper {
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+  margin: 0px;
+  background-color: #9cd4ed;
+}
+.logo {
+  display: flex;
+  color: red;
+  align-items: center;
+  margin: 15px;
+}
+
+.btn {
+  display: flex;
+  align-self: flex-end;
+  justify-content: space-around;
+  margin-left: 20%;
+}
+
+.userName {
+  display: flex;
+  padding: 10px;
+}
