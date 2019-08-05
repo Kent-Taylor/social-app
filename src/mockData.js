@@ -3,7 +3,6 @@ export default [
    name: "Lolita Sanz",
    image: "https://image.shutterstock.com/image-photo/funny-cat-ophthalmologist-appointmet-squinting-260nw-598805597.jpg",
    short_bi: "Lolita likes to spend time playing with her mouse"
-  }
   },
   {
    name: "Anna Mina",
