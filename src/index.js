@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <h1>Hello Team 2, here is our starter Social App!</h1>
-      <h2>Whoooot!</h2>
+      <h2>Let Kent know if you have any questions about github or anything</h2>
     </div>
   );
 }
