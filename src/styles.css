@@ -3,6 +3,10 @@ body {
   background-color: #3e0e40;
 }
 
+.nav-bar-wrapper img {
+  height: 100px;
+}
+
 .user-wrapper {
   font-family: sans-serif;
   display: grid;

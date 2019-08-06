@@ -9,13 +9,12 @@ const UserProfile = props => {
       <p className="user-bio">{props.user.short_bio}</p>
       <div className="edit-section">
           <div className="edit-button">
-            <button>Edit</button>
+            <button onClick={()=> props.editUser(props.user.id)}>Edit</button>
           </div>
-          <div className="delete-button">X</div>
+          <div className="delete-button" onClick={()=> props.deleteUser(props.user.id)}>X</div>
         </div>
     </div>
   );
 };
 
 export default UserProfile;
-
