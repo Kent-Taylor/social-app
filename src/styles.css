@@ -49,6 +49,11 @@
   margin-bottom: 0px;
   color: #4c4d4f;
 }
+
+.homepage-container {
+  background-color: #3e0e40;
+}
+
 .logo {
   display: flex;
   color: #4c4d4f;
