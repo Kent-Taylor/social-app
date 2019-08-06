@@ -1,3 +1,8 @@
+body {
+  margin: 0px;
+  background-color: #3e0e40;
+}
+
 .user-wrapper {
   font-family: sans-serif;
   display: grid;
@@ -45,7 +50,7 @@
   justify-content: space-between;
   height: 100px;
   margin: 0px;
-  background-color: #e4e6a3;
+  background-color: #9cd4e0;
   margin-bottom: 0px;
   color: #4c4d4f;
 }
@@ -149,6 +154,22 @@ a {
   align-self: flex-end;
   justify-content: space-around;
   margin-left: 20%;
+  text-decoration: none;
+  font-weight: 550;
+
+  margin-bottom: 20px;
+  transition: 0.3s ease-in-out;
+  border-bottom: 2px solid transparent;
+}
+
+.btn:hover {
+  display: flex;
+  align-self: flex-end;
+  justify-content: space-around;
+  margin-left: 20%;
+  text-decoration: none;
+  font-weight: 550;
+  border-bottom: 2px solid #f09c23;
 }
 
 .userName {

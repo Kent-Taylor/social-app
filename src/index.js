@@ -38,9 +38,7 @@ const App = () => {
           <Navbar />
 
           <div className="userName">
-            <div className="login">Login</div>
-            <button className="btn">USER NAME</button>
-            <button className="btn">PASSWORD</button>
+            <p>Neil_loves_Unicorns@U-go-girl</p>
           </div>
         </div>
         <Switch>

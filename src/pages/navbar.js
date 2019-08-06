@@ -12,9 +12,15 @@ const Navbar = () => {
       <NavLink className="btn" to="/">
         HOME
       </NavLink>
-      <NavLink to="/picts">PICTS</NavLink>
-      <NavLink to="/about">ABOUT</NavLink>
-      <NavLink to="/message">MESSAGE</NavLink>
+      <NavLink className="btn" to="/picts">
+        PICTURES
+      </NavLink>
+      <NavLink className="btn" to="/about">
+        ABOUT
+      </NavLink>
+      <NavLink className="btn" to="/message">
+        MESSAGE
+      </NavLink>
     </div>
   );
 };
