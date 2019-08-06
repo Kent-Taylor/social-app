@@ -9,9 +9,9 @@ const UserProfile = props => {
       <p className="user-bio">{props.user.short_bio}</p>
       <div className="edit-section">
           <div className="edit-button">
-            <button>Edit</button>
+            <button onClick={()=> props.editUser(props.id)}>Edit</button>
           </div>
-          <div className="delete-button">X</div>
+          <div className="delete-button" onClick={()=> props.deleteUser(props.id)}>X</div>
         </div>
     </div>
   );
