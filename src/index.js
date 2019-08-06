@@ -26,7 +26,7 @@ const App = () => {
   const editUser = id  => {
     fetch(`https://social-app-backend-bot.herokuapp.com/user/${id}`,{
       method: "PUT"
-    }).then(response => response.json())
+    })//.then(response => response.json())
     .then(data => {
       setUsers.name(data.name)
       setUsers.short_bio(data.short_bio)
