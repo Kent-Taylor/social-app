@@ -14,21 +14,23 @@ import UserProfile from "./userProfile";
 
 import "./styles.css";
 
-class App extends React.Component {
-  constructor() {
-    super();
+const App = () => {
+  const [users, setUsers] = React.useState([]);
 
-    this.state = {
-      users: mockData
-    };
-  }
-  renderUsers = () => {
-    return this.state.users.map(user => {
+  React.useEffect(()=>{
+    fetch("https://social-app-backend-bot.herokuapp.com/users")
+   .then(response => response.json())
+   .then(data => setUsers(data))
+   .catch(error => console.log(error));
+  }, []);
+
+  const renderUsers = () => {
+    return users.map(user => {
       return <UserProfile user={user} />;
     });
   };
 
-  render() {
+  
     return (
       <div className="App">
         <BrowserRouter>
@@ -49,10 +51,10 @@ class App extends React.Component {
             <Route path="/message" component={Message} />
           </Switch>
         </BrowserRouter>
-        <div className="user-wrapper">{this.renderUsers()}</div>
+        <div className="user-wrapper">{renderUsers()}</div>
       </div>
     );
   }
-}
+
 const rootElement = document.getElementById("root");
 ReactDOM.render(<App />, rootElement);
