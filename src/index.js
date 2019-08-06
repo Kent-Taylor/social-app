@@ -12,6 +12,7 @@ import Picts from "./pages/picts";
 import UserProfile from "./userProfile";
 
 import "./styles.css";
+import UserForm from "./userForm";
 
 const App = () => {
   const [users, setUsers] = React.useState([]);
@@ -49,6 +50,7 @@ const App = () => {
       user={user}
       deleteUser = {deleteUser} 
       editUser = {editUser}
+      editMode= {false}
       />;
     });
   };
@@ -68,6 +70,7 @@ const App = () => {
         </div>
         <Switch>
           <Route exact path="/" component={Home} />
+          <Route path="/form" component={UserForm} />
           <Route path="/picts" component={Picts} />
           <Route path="/about" component={About} />
           <Route path="/message" component={Message} />
