@@ -16,11 +16,11 @@ import "./styles.css";
 const App = () => {
   const [users, setUsers] = React.useState([]);
 
-  React.useEffect(()=>{
+  React.useEffect(() => {
     fetch("https://social-app-backend-bot.herokuapp.com/users")
-   .then(response => response.json())
-   .then(data => setUsers(data))
-   .catch(error => console.log(error));
+      .then(response => response.json())
+      .then(data => setUsers(data))
+      .catch(error => console.log(error));
   }, []);
 
   const editUser = id  => {
@@ -53,31 +53,32 @@ const App = () => {
     });
   };
 
-  
-    return (
-      <div className="App">
-        <BrowserRouter>
-          <div className="navbar-wrapper">
-            <div className="logo">desc. logo</div>
-            <Navbar />
+  return (
+    <div className="App">
+      <BrowserRouter>
+        <div className="navbar-wrapper">
+          <div className="logo">desc. logo</div>
+          <Navbar />
 
-            <div className="userName">
-              <div className="login">Login</div>
-              <button className="btn">USER NAME</button>
-              <button className="btn">PASSWORD</button>
-            </div>
+          <div className="userName">
+            <div className="login">Login</div>
+            <button className="btn">USER NAME</button>
+            <button className="btn">PASSWORD</button>
           </div>
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route path="/picts" component={Picts} />
-            <Route path="/about" component={About} />
-            <Route path="/message" component={Message} />
-          </Switch>
-        </BrowserRouter>
+        </div>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/picts" component={Picts} />
+          <Route path="/about" component={About} />
+          <Route path="/message" component={Message} />
+        </Switch>
+      </BrowserRouter>
+      <div className="homepage-container">
         <div className="user-wrapper">{renderUsers()}</div>
       </div>
-    );
-  }
+    </div>
+  );
+};
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(<App />, rootElement);
