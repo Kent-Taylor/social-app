@@ -28,16 +28,17 @@ const App = () => {
     navigate(`/form/${id}`)
   }
 
-  const deleteUser = id  => {
-    fetch(`https://social-app-backend-bot.herokuapp.com/user/${id}`,{
+  const deleteUser = id => {
+    fetch(`https://social-app-backend-bot.herokuapp.com/user/${id}`, {
       method: "DELETE"
-    }).then(setUsers(users.filter(user => user.id !== id)))
-    .catch(error => console.log("delete err", error));
-  }
-  
-  
+    })
+      .then(setUsers(users.filter(user => user.id !== id)))
+      .catch(error => console.log("delete err", error));
+  };
+
   const renderUsers = () => {
     return users.map(user => {
+
       return <UserProfile 
       //user={user}
       key={user.id}
@@ -48,6 +49,7 @@ const App = () => {
       deleteUser = {deleteUser} 
       editUser = {editUser}
       />;
+
     });
   };
 
@@ -77,9 +79,7 @@ const App = () => {
           <A href="/message">Message</A>
         </div>          
           <div className="userName">
-            <div className="login">Login</div>
-            <button className="btn">USER NAME</button>
-            <button className="btn">PASSWORD</button>
+            <p>Neil_loves_Unicorns@U-go-girl</p>
           </div>
         </div>
         {useRoutes(routes)}
