@@ -4,14 +4,7 @@
   grid-template-columns: repeat(auto-fit, 275px);
   justify-content: center;
 }
-.navbar-wrapper {
-  display: flex;
-  justify-content: space-between;
-  height: 100px;
-  margin: 0px;
-  background-color: #9cd4ed;
 
-}
 .logo {
   display: flex;
   color: red;
@@ -27,25 +20,90 @@
 }
 
 .user-profile {
+  color: #9cd4e0;
+  background-color: #4c4d4f;
   margin: 5px;
   width: 250px;
-  height: 300px;
+  height: 375px;
   border: 1px solid black;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   border-radius: 10px;
-  background-color: #999; /*box-shadow: 5px 5px 5px #999; */
+  box-shadow: 20px 20px 49px 0px rgba(0, 0, 0, 0.75);
 }
 
 .user-bio {
   width: 230px;
-  border: 1px solid #666; /*we can ommit this border*/
+
+  text-align: center;
 }
 
 img {
   height: 150px;
   width: 150px;
   border-radius: 50%;
+}
+
+.logo {
+  display: flex;
+  color: red;
+  align-items: center;
+  margin: 15px;
+}
+
+.edit-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.delete-button {
+  color: #f09c23;
+  margin-left: 80%;
+  margin-bottom: 5px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.delete-button:hover {
+  color: #b90000;
+  margin-left: 80%;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.edit-button button {
+  background-color: #9cd4e0;
+  border: none;
+  outline: none;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  color: #4c4d4f;
+  font-weight: 600;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.edit-button button:hover {
+  background-color: #b6f2ff;
+  border: none;
+  outline: none;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  color: #4c4d4f;
+  font-weight: 600;
+}
+
+.btn {
+  display: flex;
+  align-self: flex-end;
+  justify-content: space-around;
+  margin-left: 20%;
+}
+
+.userName {
+  display: flex;
+  padding: 10px;
 }
