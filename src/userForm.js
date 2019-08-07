@@ -106,7 +106,6 @@ const UserForm = props => {
   };
   return (
     <div className="userform">
-      <h1>Add a user, please</h1>
       <form onSubmit={handleSubmit}>
         <DropzoneComponent
           ref={imageRef}
@@ -117,20 +116,24 @@ const UserForm = props => {
           Drop your profile pic
         </DropzoneComponent>
         <input
+          className="caption-input"
           type="text"
-          placeholder="Caption"
+          placeholder="User Name"
           value={name}
           onChange={e => setName(e.target.value)}
         />
         <div>
           <input
+            className="text-input"
             type="text"
             placeholder="Bio"
             value={shortBio}
             onChange={e => setShortBio(e.target.value)}
           />
         </div>
-        <button type="submit">Create User</button>
+        <button className="user-form-button" type="submit">
+          Create User
+        </button>
       </form>
     </div>
   );
