@@ -1,6 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
+import UniSpaceLogo from "./images/unispace-logo1.png";
+
 //import Navbar from "./pages/navbar";
 import Home from "./pages/home";
 
@@ -10,7 +12,7 @@ import Picts from "./pages/picts";
 
 import UserProfile from "./userProfile";
 import UserForm from "./userForm";
-import {navigate, useRoutes, A} from "hookrouter";
+import { navigate, useRoutes, A } from "hookrouter";
 
 import "./styles.css";
 
@@ -25,8 +27,8 @@ const App = () => {
   }, []);
 
   const editUser = id => {
-    navigate(`/form/${id}`)
-  }
+    navigate(`/form/${id}`);
+  };
 
   const deleteUser = id => {
     fetch(`https://social-app-backend-bot.herokuapp.com/user/${id}`, {
@@ -38,51 +40,54 @@ const App = () => {
 
   const renderUsers = () => {
     return users.map(user => {
-
-      return <UserProfile 
-      //user={user}
-      key={user.id}
-      id={user.id}
-      name = {user.name}
-      image = {user.image}
-      short_bio = {user.short_bio}
-      deleteUser = {deleteUser} 
-      editUser = {editUser}
-      />;
-
+      return (
+        <UserProfile
+          //user={user}
+          key={user.id}
+          id={user.id}
+          name={user.name}
+          image={user.image}
+          short_bio={user.short_bio}
+          deleteUser={deleteUser}
+          editUser={editUser}
+        />
+      );
     });
   };
 
   /*-----*/
 
   const routes = {
-    "/": () => <Home renderUsers={renderUsers}/>,
-    "/form": () => <UserForm/>,
-    "/form/:id": ({id}) => <UserForm id={id} editMode={true}/>,
-    "/picts": () => <Picts/>,
-    "/about": () => <About/>,
-    "/message": () => <Message/>
-    };
+    "/": () => <Home renderUsers={renderUsers} />,
+    "/form": () => <UserForm />,
+    "/form/:id": ({ id }) => <UserForm id={id} editMode={true} />,
+    "/picts": () => <Picts />,
+    "/about": () => <About />,
+    "/message": () => <Message />
+  };
   /**/
 
   return (
-      <div className="App">
-        <div className="navbar-wrapper">
-          <div className="logo">desc. logo</div>
-          {/*<Navbar />*/}
-          <div className="btn-wrapper">
+    <div className="App">
+      <div className="navbar-wrapper">
+        <div className="logo">
+          <img src={UniSpaceLogo} alt="UniSpaceLogo" />
+        </div>
+
+        {/*<Navbar />*/}
+        <div className="btn-wrapper">
           {/*<A className="btn" href="/">Home</A>*/}
           <A href="/">Home</A>
           <A href="/form">Form</A>
-          <A href="/picts">Picts</A>
+          <A href="/picts">Pictures</A>
           <A href="/about">About</A>
           <A href="/message">Message</A>
-        </div>          
-          <div className="userName">
-            <p>Neil_loves_Unicorns@U-go-girl</p>
-          </div>
         </div>
-        {useRoutes(routes)}
+        <div className="userName">
+          <p>Neil_loves_Unicorns@U-go-girl</p>
+        </div>
+      </div>
+      {useRoutes(routes)}
     </div>
   );
 };
