@@ -1,5 +1,5 @@
 import React from "react";
 
 export default function picts() {
-  return <div>Pictures</div>;
+  return <div className="pictures-page">Pictures</div>;
 }

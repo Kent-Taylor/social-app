@@ -3,6 +3,12 @@ body {
   background-color: #3e0e40;
 }
 
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .nav-bar-wrapper img {
   height: 100px;
 }
@@ -12,6 +18,14 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, 275px);
   justify-content: center;
+}
+
+.userform {
+  height: 100vh;
+}
+
+.pictures-page {
+  height: 100vh;
 }
 
 .logo {
@@ -37,6 +51,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 30px;
   justify-content: center;
   border-radius: 10px;
   box-shadow: 20px 20px 49px 0px rgba(0, 0, 0, 0.75);
@@ -75,6 +90,7 @@ body {
 
 .homepage-container {
   background-color: #3e0e40;
+  height: 100vh;
 }
 
 .user-profile img {
@@ -93,7 +109,7 @@ body {
 }
 
 .logo img {
-  width: 130px;
+  width: 170px;
   padding-left: 45px;
 }
 
@@ -104,12 +120,19 @@ a {
   margin-bottom: 0px;
 }
 
-.userName {
+.userName p {
   display: flex;
   justify-content: space-around;
-  height: 35%;
-  padding: 10px;
+  height: 20px;
   color: #4c4d4f;
+  margin-top: 50px;
+}
+
+.log-in-status {
+  color: white;
+  margin-right: 10px;
+  margin-top: 50px;
+  margin-left: 80px;
 }
 
 .login {
@@ -186,4 +209,84 @@ a {
 .userName {
   display: flex;
   padding: 10px;
+}
+
+.copyright {
+  color: #a9a9a9;
+  font-size: 0.5rem;
+}
+.button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.button a {
+  text-decoration: none;
+  color: #4c4d4f;
+}
+.footer-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #9cd4e0;
+  height: 100%;
+}
+
+.caption-input::placeholder {
+  color: white;
+}
+
+.caption-input {
+  background-color: #9cd4e0;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  margin-top: 10px;
+  text-align: center;
+  width: 40%;
+  text-align: center;
+  padding: 10px;
+  margin-left: 150px;
+  font-size: 1.2em;
+  outline: none;
+}
+
+.dropzone.dz-clickable {
+  cursor: pointer;
+  width: 130%;
+}
+
+.userform {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
+}
+
+.text-input {
+  margin-left: 150px;
+  margin-top: 5px;
+  background-color: #9cd4e0;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+  width: 40%;
+  text-align: center;
+  padding: 10px;
+  font-size: 1.2em;
+  outline: none;
+}
+
+.user-form-button {
+  margin-left: 160px;
+  margin-top: 10px;
+  border-radius: 5px;
+  background-color: #f09c23;
+  border: none;
+  outline: none;
+  color: white;
+  width: 40%;
+  font-size: 1.2em;
 }

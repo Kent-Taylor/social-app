@@ -78,16 +78,25 @@ const App = () => {
         <div className="btn-wrapper">
           {/*<A className="btn" href="/">Home</A>*/}
           <A href="/">Home</A>
-          <A href="/form">Form</A>
+          <A href="/form">Create</A>
           <A href="/picts">Pictures</A>
-          <A href="/about">About</A>
-          <A href="/message">Message</A>
         </div>
         <div className="userName">
+          <div className="log-in-status">Logged in as:</div>
           <p>Neil_loves_Unicorns@U-go-girl</p>
         </div>
       </div>
       {useRoutes(routes)}
+      <div className="footer-wrapper">
+        <div className="button">
+          <A href="/">Home</A>
+          <A href="/form">Create</A>
+          <A href="/picts">Pictures</A>
+        </div>
+        <div className="copyright">
+          <h3>Copyright © 2019 Students Inc. All rights reserved.</h3>
+        </div>
+      </div>
     </div>
   );
 };
