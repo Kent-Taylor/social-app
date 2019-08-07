@@ -20,6 +20,14 @@ body {
   justify-content: center;
 }
 
+.userform {
+  height: 100vh;
+}
+
+.pictures-page {
+  height: 100vh;
+}
+
 .logo {
   display: flex;
   color: red;
