@@ -62,22 +62,10 @@ body {
   background-color: #3e0e40;
 }
 
-.logo {
-  display: flex;
-  color: #4c4d4f;
-}
-
-img {
+.user-profile img {
   height: 150px;
   width: 150px;
   border-radius: 50%;
-}
-
-.logo {
-  display: flex;
-  color: red;
-  align-items: center;
-  margin: 15px;
 }
 
 .btn-wrapper {
@@ -87,6 +75,10 @@ img {
   margin-left: 45%;
   height: 20%;
   text-decoration: none;
+}
+
+.logo img {
+  width: 130px;
 }
 
 a {

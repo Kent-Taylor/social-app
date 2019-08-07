@@ -1,6 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
+import UniSpaceLogo from "./images/unispace-logo1.png";
+
 //import Navbar from "./pages/navbar";
 import Home from "./pages/home";
 
@@ -68,7 +70,10 @@ const App = () => {
   return (
     <div className="App">
       <div className="navbar-wrapper">
-        <div className="logo">desc. logo</div>
+        <div className="logo">
+          <img src={UniSpaceLogo} alt="UniSpaceLogo" />
+        </div>
+
         {/*<Navbar />*/}
         <div className="btn-wrapper">
           {/*<A className="btn" href="/">Home</A>*/}
