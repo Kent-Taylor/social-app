@@ -1,22 +1,10 @@
 import React from "react";
-import ReactDOM from "react-dom";
 
-import UniSpaceLogo from "./images/unispace-logo1.png";
-
-//import Navbar from "./pages/navbar";
-import Home from "./pages/home";
-
-import About from "./pages/about";
-import Message from "./pages/message";
-import Picts from "./pages/picts";
-
-import UserProfile from "./userProfile";
-import UserForm from "./userForm";
 import { navigate, useRoutes, A } from "hookrouter";
+import UserProfile from "../userProfile";
+import UniSpaceLogo from "../images/unispace-logo1.png";
 
-import "./styles.css";
-
-const App = () => {
+const Home = props => {
   const [users, setUsers] = React.useState([]);
 
   React.useEffect(() => {
@@ -55,51 +43,40 @@ const App = () => {
     });
   };
 
-  /*-----*/
-
-  const routes = {
-    "/": () => <Home renderUsers={renderUsers} />,
-    "/form": () => <UserForm />,
-    "/form/:id": ({ id }) => <UserForm id={id} editMode={true} />,
-    "/picts": () => <Picts />,
-    "/about": () => <About />,
-    "/message": () => <Message />
-  };
-  /**/
-
   return (
-    <div className="App">
-      <div className="navbar-wrapper">
-        <div className="logo">
-          <img src={UniSpaceLogo} alt="UniSpaceLogo" />
-        </div>
+    <div className="homepage-container">
+      <div className="App">
+        <div className="navbar-wrapper">
+          <div className="logo">
+            <img src={UniSpaceLogo} alt="UniSpaceLogo" />
+          </div>
 
-        {/*<Navbar />*/}
-        <div className="btn-wrapper">
-          {/*<A className="btn" href="/">Home</A>*/}
-          <A href="/">Home</A>
-          <A href="/form">Create</A>
-          <A href="/picts">Pictures</A>
+          {/*<Navbar />*/}
+          <div className="btn-wrapper">
+            {/*<A className="btn" href="/">Home</A>*/}
+            <A href="/">Home</A>
+            <A href="/form">Create</A>
+            <A href="/picts">Pictures</A>
+          </div>
+          <div className="userName">
+            <div className="log-in-status">Logged in as:</div>
+            <p>Neil_loves_Unicorns@U-go-girl</p>
+          </div>
         </div>
-        <div className="userName">
-          <div className="log-in-status">Logged in as:</div>
-          <p>Neil_loves_Unicorns@U-go-girl</p>
-        </div>
-      </div>
-      {useRoutes(routes)}
-      <div className="footer-wrapper">
-        <div className="button">
-          <A href="/">Home</A>
-          <A href="/form">Create</A>
-          <A href="/picts">Pictures</A>
-        </div>
-        <div className="copyright">
-          <h3>Copyright © 2019 Students Inc. All rights reserved.</h3>
+        <div className="user-wrapper">{renderUsers()}</div>
+        <div className="footer-wrapper">
+          <div className="button">
+            <A href="/">Home</A>
+            <A href="/form">Create</A>
+            <A href="/picts">Pictures</A>
+          </div>
+          <div className="copyright">
+            <h3>Copyright © 2019 Students Inc. All rights reserved.</h3>
+          </div>
         </div>
       </div>
     </div>
   );
 };
 
-const rootElement = document.getElementById("root");
-ReactDOM.render(<App />, rootElement);
+export default Home;
