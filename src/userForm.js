@@ -78,8 +78,6 @@ const UserForm = props => {
       )
         .then(imageRef.current.dropzone.removeAllFiles())
         .catch(error => console.log("put error", error));
-
-      navigate("/");
     } else {
       await fetch("https://social-app-backend-bot.herokuapp.com/add-user", {
         method: "POST",
@@ -98,10 +96,10 @@ const UserForm = props => {
         .then(setImage(""))
         .then(setShortBio(""))
         .then(imageRef.current.dropzone.removeAllFiles())
-        .then(navigate("/")) //after removing take user to homepage
+        //after removing take user to homepage
         .catch(err => console.log("form submit err", err));
-      navigate("/");
     }
+    navigate("/");
   };
   return (
     <div className="userform">
