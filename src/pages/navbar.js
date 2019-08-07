@@ -1,11 +1,9 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import unicorn from "../images/unispace-logo1.png";
 
 const Navbar = () => {
   return (
     <div className="nav-bar-wrapper">
-      <img src={unicorn} alt="unicorn logo" />
       <div className="btn-wrapper">
         <NavLink className="btn" to="/">
           HOME
