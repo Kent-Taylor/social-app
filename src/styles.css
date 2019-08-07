@@ -33,11 +33,14 @@
   color: #A9A9A9;
   font-size: .5rem;
 }
-
 .button {
   display: flex;
+  flex-direction: row;
   justify-content: space-around;
+}
+.button a{
   text-decoration: none;
+  color: #4C4D4F;
 }
 
 .footer-wrapper {

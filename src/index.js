@@ -9,10 +9,10 @@ function App() {
       <div className="navbar-wrapper">
         <div className="logo">desc. logo</div>
         <div className="btn">
-          <button>newbutton</button>
-          <button>newbutton</button>
-          <button>newbutton</button>
-          <button>newbutton</button>
+          <a href='google.com'>newbutton</a>
+          <a href='google.com'>newbutton</a>
+          <a href='google.com'>newbutton</a>
+          <a href='google.com'>newbutton</a>
         </div>
         <div className="userName">user name</div>
       </div>
@@ -22,11 +22,11 @@ function App() {
 
       <div className='footer-wrapper'>
         <div className='button'>
-          <button>Home</button>
-          <button>From</button>
-          <button>Pictures</button>
-          <button>About</button>
-          <button>Messages</button>
+            <a href='google.com'>Home</a>
+            <a href='google.com'>From</a>
+            <a href='google.com'>Pictures</a>
+            <a href='google.com'>About</a>
+            <a href='google.com'>Messages</a>
         </div>
         <div className="copyright">
             <h3>Copyright © 2019 Students Inc. All rights reserved.</h3>
