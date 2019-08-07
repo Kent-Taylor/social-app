@@ -8,7 +8,7 @@ import "../node_modules/dropzone/dist/min/dropzone.min.css";
 
 const UserForm = props => {
   const [name, setName] = React.useState("");
-  const [shortBio, setShortBio] = React.useState("");
+  const [short_bio, setShortBio] = React.useState("");
   const [image, setImage] = React.useState("");
   const imageRef = React.useRef(null);
 
@@ -72,7 +72,7 @@ const UserForm = props => {
           },
           body: JSON.stringify({
             name: name,
-            short_bio: shortBio
+            short_bio: short_bio
           })
         }
       )
@@ -90,7 +90,7 @@ const UserForm = props => {
         body: JSON.stringify({
           name: name,
           image: image,
-          short_bio: shortBio
+          short_bio: short_bio
         })
       })
         .then(result => result.json())
@@ -98,9 +98,8 @@ const UserForm = props => {
         .then(setImage(""))
         .then(setShortBio(""))
         .then(imageRef.current.dropzone.removeAllFiles())
-        .then(navigate("/")) //after removing take user to homepage
         .catch(err => console.log("form submit err", err));
-      navigate("/");
+        navigate("/");
 
     }
   };
@@ -126,7 +125,7 @@ const UserForm = props => {
           <input
             type="text"
             placeholder="Bio"
-            value={shortBio}
+            value={short_bio}
             onChange={e => setShortBio(e.target.value)}
           />
         </div>
