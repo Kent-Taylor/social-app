@@ -28,3 +28,19 @@
   display: flex;
   padding: 10px;
 }
+
+.copyright {
+  color: #A9A9A9;
+  font-size: .5rem;
+}
+
+.button {
+  display: flex;
+  justify-content: space-around;
+  text-decoration: none;
+}
+
+.footer-wrapper {
+  background-color: #9CD4E0;
+  height: 100%;
+}

@@ -19,6 +19,19 @@ function App() {
 
       <h1>Hello Team 2, here is our starter Social App!</h1>
       <h2>Let Kent know if you have any questions about github or anything</h2>
+
+      <div className='footer-wrapper'>
+        <div className='button'>
+          <button>Home</button>
+          <button>From</button>
+          <button>Pictures</button>
+          <button>About</button>
+          <button>Messages</button>
+        </div>
+        <div className="copyright">
+            <h3>Copyright © 2019 Students Inc. All rights reserved.</h3>
+        </div>
+      </div>
     </div>
   );
 }
