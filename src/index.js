@@ -23,13 +23,12 @@ const App = () => {
     "/": () => <Home />,
     "/form": () => <UserForm />,
     "/form/:id": ({ id }) => <UserForm id={id} editMode={true} />,
-    "/picts": () => <Picts />,
     "/about": () => <About />,
     "/message": () => <Message />
   };
   /**/
 
-  return useRoutes(routes);
+  return <div className="homepage-container">{useRoutes(routes)}</div>;
 };
 
 const rootElement = document.getElementById("root");

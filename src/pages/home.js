@@ -56,7 +56,6 @@ const Home = props => {
             {/*<A className="btn" href="/">Home</A>*/}
             <A href="/">Home</A>
             <A href="/form">Create</A>
-            <A href="/picts">Pictures</A>
           </div>
           <div className="userName">
             <div className="log-in-status">Logged in as:</div>
@@ -68,7 +67,6 @@ const Home = props => {
           <div className="button">
             <A href="/">Home</A>
             <A href="/form">Create</A>
-            <A href="/picts">Pictures</A>
           </div>
           <div className="copyright">
             <h3>Copyright © 2019 Students Inc. All rights reserved.</h3>
