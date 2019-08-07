@@ -99,6 +99,7 @@ const UserForm = props => {
       .then(navigate("/"))//after removing take user to homepage
       .catch(err => console.log("form submit err", err))     
       navigate("/");
+
     }
   };
     return (
