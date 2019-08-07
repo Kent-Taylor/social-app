@@ -78,7 +78,7 @@ const App = () => {
         <div className="btn-wrapper">
           {/*<A className="btn" href="/">Home</A>*/}
           <A href="/">Home</A>
-          <A href="/form">Form</A>
+          <A href="/form">Create</A>
           <A href="/picts">Pictures</A>
         </div>
         <div className="userName">
@@ -90,7 +90,7 @@ const App = () => {
       <div className="footer-wrapper">
         <div className="button">
           <A href="/">Home</A>
-          <A href="/form">Form</A>
+          <A href="/form">Create</A>
           <A href="/picts">Pictures</A>
         </div>
         <div className="copyright">
