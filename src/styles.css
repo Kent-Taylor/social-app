@@ -264,6 +264,13 @@ a {
   font-size: 1.2em;
 }
 
+.pictures-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
 .text-input {
   margin-left: 150px;
   margin-top: 5px;
